@@ -5,7 +5,6 @@ This repository contains a script to create and sync a Kima node using snapshots
 ## Prerequisites
 
 - A running Kima node
-- `wget` installed on the system
 - `tar` installed on the system
 - Systemd service for the Kima node (`kimad.service`)
 
@@ -16,7 +15,7 @@ This repository contains a script to create and sync a Kima node using snapshots
 Clone this repository to your local machine:
 
 ```bash
-git clone <repository_url>
+git clone git@github.com:kima-finance/kima-snapshots.git
 cd kima-snapshots
 ```
 
@@ -41,19 +40,27 @@ This will:
     Backup the data directory.
     Restart the Kima node service.
     Create a compressed archive of the data directory.
+    Push the snapshot to the repository in the snapshots folder.
 ```
 The snapshot will be saved as kima_snapshot.tar.gz in the backup directory.
 
 -------------------------------------------------------------------------------------------------------------
 
 ### 4. Sync from a Snapshot
-To sync another Kima node using a snapshot:
+To sync another Kima node using the latest snapshot:
 
 ```bash
-./snapshot.sh sync <snapshot_url>
+./snapshot.sh sync 
 ```
 
-Replace <snapshot_url> with the URL to the snapshot file. This will:
+To sync another Kima node using a specific snapshot:
+
+```bash
+./snapshot.sh sync <snapshot_filename>
+```
+
+Replace <snapshot_filename> with the name of the snapshot file in the snapshots folder. This will:
+
 
 ```
     Stop the Kima node service.
