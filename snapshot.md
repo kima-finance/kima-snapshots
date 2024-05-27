@@ -1,3 +1,13 @@
+---
+title: Syncing Nodes with Snapshot in Testnet Environment
+category: KB
+kind: docs
+author: Marian <marian.zheng@kima.finance>
+created: 2024-05-27
+modified: 2024-05-27
+tick: KB-610
+---
+
 ### Syncing Nodes with Snapshot in Testnet Environment
 
 In a testnet environment with significant block data, syncing a new node bootstrap can be challenging. Although CometBFT provides a fast sync method, it may stop and revert to normal mode due to network latency and block issues, taking several days to complete synchronization.
