@@ -24,7 +24,7 @@ cd kima-snapshots
 Make the snapshot.sh script executable:
 
 ```bash
-chmod +x snapshot.sh
+chmod +x backup-full-data.sh
 ```
 
 ### 3. Create a Snapshot
