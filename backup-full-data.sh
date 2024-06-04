@@ -17,14 +17,14 @@ case $1 in
         # Backup the data directory
         tar -czvf $SNAPSHOT_FILE -C $DATA_DIR .
 
-        # Restart the Kima node service
-        sudo systemctl start $SERVICE_NAME
+        # # Restart the Kima node service
+        # sudo systemctl start $SERVICE_NAME
 
-        echo "Snapshot created at $SNAPSHOT_FILE"
+        echo "Full Backup created at $SNAPSHOT_FILE"
         ;;
     sync)
         if [ -z "$2" ]; then
-            echo "Please provide the URL to the snapshot file."
+            echo "Please provide the URL to the backup file."
             exit 1
         fi
 
