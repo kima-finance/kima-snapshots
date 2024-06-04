@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-BACKUP_DIR="$HOME/kima_backups"
+BACKUP_DIR="$HOME"
 DATA_DIR="$HOME/.kima"
 SERVICE_NAME="kimad"
 SNAPSHOT_FILE="$BACKUP_DIR/kima_snapshot.tar.gz"
